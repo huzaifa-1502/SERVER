@@ -12,6 +12,9 @@ app.get("/profile", (req, res) => {
 app.get("/about", (req, res) => {
     res.send("some information about me");
 })
+app.get("/*", (req, res) => {
+    res.send("Page not found");
+})
 app.listen(port, () => {
     console.log(`server is running on port ${port}`);
 }); 
